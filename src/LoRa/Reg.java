@@ -1,0 +1,47 @@
+package LoRa;
+
+public enum Reg {
+    RFM_REG_FIFO(0x00),
+    RFM_REG_OP_MODE(0x01),
+    RFM_REG_FR_MSB(0x06),
+    RFM_REG_FR_MID(0x07),
+    RFM_REG_FR_LSB(0x08),
+    RFM_REG_OCP(0x0b),
+    RFM_REG_PA_CONFIG(0x09),
+    RFM_REG_LNA(0x0C),
+    RFM_REG_FIFO_ADDR_PTR(0x0D),
+    RFM_REG_IRQ_FLAGS(0x12),
+    RFM_REG_LAST_RSSI(0x1A),
+    RFM_REG_MODEM_CONFIG1(0x1D),
+    RFM_REG_MODEM_CONFIG2(0x1E),
+    RFM_REG_SYM_TIMEOUT_LSB(0x1F),
+    RFM_REG_PREAMBLE_MSB(0x20),
+    RFM_REG_PREAMBLE_LSB(0x21),
+    RFM_REG_PAYLOAD_LENGTH(0x22),
+    RFM_REG_MODEM_CONFIG3(0x26),
+    RFM_REG_INVERT_IQ(0x33),
+    RFM_REG_INVERT_IQ2(0x3b),
+    RFM_REG_SYNC_WORD(0x39),
+    RFM_REG_DIO_MAPPING1(0x40),
+    RFM_REG_DIO_MAPPING2(0x41),
+    RFM_REG_PA_DAC(0x4d),
+    RFM_MODE_SLEEP(0b000),
+    RFM_MODE_STANDBY(0b001),
+    RFM_MODE_FSTX(0b010),
+    RFM_MODE_TX(0b011),
+    RFM_MODE_FSRX(0b100),
+    RFM_MODE_RXCONT(0b101),
+    RFM_MODE_RXSINGLE(0b110),
+    RFM_MODE_CAD(0b111),
+    RFM_MODE_LORA(0b10000000);
+
+    private int val;
+
+    Reg(int val) {
+        this.val = val;
+    }
+
+    public int getVal() {
+        return val;
+    }
+}
